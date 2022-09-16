@@ -210,7 +210,7 @@ function playSample(instrument, note) {
 
 
 
-document.querySelector(".click").addEventListener("keydown", (event) => {
+document.addEventListener("keydown", (event) => {
   function playSample(instrument, note) {
     getSample(instrument, note).then(({ audioBuffer, distance }) => {
       let playbackRate = Math.pow(2, distance / 12);
