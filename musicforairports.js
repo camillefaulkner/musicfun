@@ -263,4 +263,22 @@ document.addEventListener("keydown", (event) => {
   else if (event.keyCode === 75) {
     playSample('Grand Piano', 'C#3')
   }
+  else if (event.keyCode === 90) {
+    playSample('Grand Piano', 'D4')
+  }
+  else if (event.keyCode === 88) {
+    playSample('Grand Piano', 'E4')
+  }
+  else if (event.keyCode === 67) {
+    playSample('Grand Piano', 'F#4')
+  }
+  else if (event.keyCode === 86) {
+    playSample('Grand Piano', 'G4')
+  }
+  else if (event.keyCode === 66) {
+    playSample('Grand Piano', 'A4')
+  }
+  else if (event.keyCode === 78) {
+    playSample('Grand Piano', 'B4')
+  }
 });
