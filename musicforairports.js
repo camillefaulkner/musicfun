@@ -210,7 +210,7 @@ function playSample(instrument, note) {
 
 
 
-document.addEventListener("keydown", (event) => {
+document.getElementById("keys").addEventListener("keydown", (event) => {
   if (event.keyCode === 87) {
     playSample('Grand Piano', 'D2')
   }
