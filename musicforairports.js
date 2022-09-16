@@ -1,33 +1,33 @@
 const SAMPLE_LIBRARY = {
-    'Grand Piano': [
-        { note: 'D', octave: 1, file: 'samples/D1.mp3' },
-        { note: 'D', octave: 2, file: 'samples/D2.mp3' },
-        { note: 'D', octave: 3, file: 'samples/D3.mp3' },
-        { note: 'D', octave: 4, file: 'samples/D4.mp3' },
-        { note: 'E', octave: 1, file: 'samples/E1.mp3' },
-        { note: 'E', octave: 2, file: 'samples/E2.mp3' },
-        { note: 'E', octave: 3, file: 'samples/E3.mp3' },
-        { note: 'E', octave: 4, file: 'samples/E4.mp3' },
-        { note: 'F#', octave: 1, file: 'samples/F#1.mp3' },
-        { note: 'F#', octave: 2, file: 'samples/F#2.mp3' },
-        { note: 'F#', octave: 3, file: 'samples/F#3.mp3' },
-        { note: 'F#', octave: 4, file: 'samples/F#4.mp3' },
-        // { note: 'G', octave: 1, file: 'samples/G1.mp3' },
-        // { note: 'G', octave: 2, file: 'samples/G2.mp3' },
-        // { note: 'G', octave: 3, file: 'samples/G3.mp3' },
-        // { note: 'G', octave: 4, file: 'samples/G4.mp3' },
-        { note: 'A', octave: 1, file: 'samples/A1.mp3' },
-        { note: 'A', octave: 2, file: 'samples/A2.mp3' },
-        { note: 'A', octave: 3, file: 'samples/A3.mp3' },
-        { note: 'A', octave: 4, file: 'samples/A4.mp3' },
-        { note: 'B', octave: 1, file: 'samples/B1.mp3' },
-        { note: 'B', octave: 2, file: 'samples/B2.mp3' },
-        { note: 'B', octave: 3, file: 'samples/B3.mp3' },
-        { note: 'B', octave: 4, file: 'samples/B4.mp3' },
-        { note: 'C#', octave: 1, file: 'samples/C#1.mp3' },
-        { note: 'C#', octave: 2, file: 'samples/C#2.mp3' },
-        { note: 'C#', octave: 3, file: 'samples/C#3.mp3' }
-    ]
+  'Grand Piano': [
+    { note: 'D', octave: 1, file: 'samples/D1.mp3' },
+    { note: 'D', octave: 2, file: 'samples/D2.mp3' },
+    { note: 'D', octave: 3, file: 'samples/D3.mp3' },
+    { note: 'D', octave: 4, file: 'samples/D4.mp3' },
+    { note: 'E', octave: 1, file: 'samples/E1.mp3' },
+    { note: 'E', octave: 2, file: 'samples/E2.mp3' },
+    { note: 'E', octave: 3, file: 'samples/E3.mp3' },
+    { note: 'E', octave: 4, file: 'samples/E4.mp3' },
+    { note: 'F#', octave: 1, file: 'samples/F#1.mp3' },
+    { note: 'F#', octave: 2, file: 'samples/F#2.mp3' },
+    { note: 'F#', octave: 3, file: 'samples/F#3.mp3' },
+    { note: 'F#', octave: 4, file: 'samples/F#4.mp3' },
+    // { note: 'G', octave: 1, file: 'samples/G1.mp3' },
+    // { note: 'G', octave: 2, file: 'samples/G2.mp3' },
+    // { note: 'G', octave: 3, file: 'samples/G3.mp3' },
+    // { note: 'G', octave: 4, file: 'samples/G4.mp3' },
+    { note: 'A', octave: 1, file: 'samples/A1.mp3' },
+    { note: 'A', octave: 2, file: 'samples/A2.mp3' },
+    { note: 'A', octave: 3, file: 'samples/A3.mp3' },
+    { note: 'A', octave: 4, file: 'samples/A4.mp3' },
+    { note: 'B', octave: 1, file: 'samples/B1.mp3' },
+    { note: 'B', octave: 2, file: 'samples/B2.mp3' },
+    { note: 'B', octave: 3, file: 'samples/B3.mp3' },
+    { note: 'B', octave: 4, file: 'samples/B4.mp3' },
+    { note: 'C#', octave: 1, file: 'samples/C#1.mp3' },
+    { note: 'C#', octave: 2, file: 'samples/C#2.mp3' },
+    { note: 'C#', octave: 3, file: 'samples/C#3.mp3' }
+  ]
 }
 
 const OCTAVE = ['C', 'C#', 'D', 'D#', 'E', 'F', 'F#', 'G', 'G#', 'A', 'A#', 'B'];
@@ -66,7 +66,7 @@ function flatToSharp(note) {
     case 'Eb': return 'D#';
     case 'Gb': return 'F#';
     case 'Ab': return 'G#';
-    default:   return note;
+    default: return note;
   }
 }
 
@@ -85,7 +85,7 @@ function getSample(instrument, noteAndOctave) {
 }
 
 function playSample(instrument, note) {
-  getSample(instrument, note).then(({audioBuffer, distance}) => {
+  getSample(instrument, note).then(({ audioBuffer, distance }) => {
     let playbackRate = Math.pow(2, distance / 12);
     let bufferSource = audioContext.createBufferSource();
     bufferSource.buffer = audioBuffer;
@@ -104,7 +104,7 @@ function playSample(instrument, note) {
 //         let noteNum = parseInt(Math.random() * (21)) //number of samples
 //         let noteLength = parseInt(Math.random() * (30-3) + 3) * 250
 //         let note = SAMPLE_LIBRARY["Grand Piano"][noteNum].note + SAMPLE_LIBRARY["Grand Piano"][noteNum].octave
-        
+
 //         // songObj[i] = setTimeout(() => playSample('Grand Piano', note),  noteLength);
 //         setTimeout(() => playSample('Grand Piano', note),  noteLength);
 //     }
@@ -210,7 +210,17 @@ function playSample(instrument, note) {
 
 
 
-document.getElementById("keys").addEventListener("keydown", (event) => {
+document.addEventListener("keydown", (event) => {
+  function playSample(instrument, note) {
+    getSample(instrument, note).then(({ audioBuffer, distance }) => {
+      let playbackRate = Math.pow(2, distance / 12);
+      let bufferSource = audioContext.createBufferSource();
+      bufferSource.buffer = audioBuffer;
+      bufferSource.playbackRate.value = playbackRate;
+      bufferSource.connect(audioContext.destination);
+      bufferSource.start();
+    });
+  }
   if (event.keyCode === 87) {
     playSample('Grand Piano', 'D2')
   }
