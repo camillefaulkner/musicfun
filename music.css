@@ -1,0 +1,46 @@
+.blob {
+    background-color: pink;
+    padding: 2rem;
+    margin-bottom: 3rem;
+    width:20rem;
+}
+.blob1 {
+    background-color: lightgoldenrodyellow;
+    padding: 2rem;
+    margin-bottom: 3rem;
+    width:20rem;
+}
+.blob2 {
+    background-color: turquoise;
+    padding: 2rem;
+    margin-bottom: 3rem;
+    width:20rem;
+}
+.blob3 {
+    background-color: violet;
+    padding: 2rem;
+    margin-bottom: 3rem;
+    width:20rem;
+}
+.blob4 {
+    background-color: lightblue;
+    padding: 2rem;
+    margin-bottom: 3rem;
+    width:20rem;
+}
+.blob5 {
+    background-color: lightgreen;
+    padding: 2rem;
+    margin-bottom: 3rem;
+    width:20rem;
+}
+.blob6 {
+    background-color: orange;
+    padding: 2rem;
+    margin-bottom: 3rem;
+    width:20rem;
+}
+
+body {
+    background-color: grey;
+}
