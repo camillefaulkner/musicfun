@@ -25,8 +25,8 @@ const SAMPLE_LIBRARY = {
         { note: 'B', octave: 3, file: 'samples/B3.mp3' },
         { note: 'B', octave: 4, file: 'samples/B4.mp3' },
         { note: 'C#', octave: 1, file: 'samples/C#1.mp3' },
-        { note: 'C#', octave: 2, file: 'samples/C#2.mp3' }
-        // { note: 'C#', octave: 3, file: 'samples/C#3.mp3' }
+        { note: 'C#', octave: 2, file: 'samples/C#2.mp3' },
+        { note: 'C#', octave: 3, file: 'samples/C#3.mp3' }
     ]
 }
 
@@ -133,75 +133,124 @@ function playSample(instrument, note) {
 //look at switches
 
 
-var note = document.querySelector(".blob");
+// var note = document.querySelector(".blob");
 
-// Set up an event handler. Notice that we don't use "on" in front
-// of the event name when doing it this way.
-note.addEventListener("mouseover", changeDef);
+// // Set up an event handler. Notice that we don't use "on" in front
+// // of the event name when doing it this way.
+// note.addEventListener("mouseover", changeDef);
 
-function changeDef(event){
-  playSample('Grand Piano', 'D2')
-}
-
-
-
-var note1 = document.querySelector(".blob1");
-
-// Set up an event handler. Notice that we don't use "on" in front
-// of the event name when doing it this way.
-note1.addEventListener("mouseover", changeDef1);
-
-function changeDef1(event){
-  playSample('Grand Piano', 'A3')
-}
-
-var note2 = document.querySelector(".blob2");
-
-// Set up an event handler. Notice that we don't use "on" in front
-// of the event name when doing it this way.
-note2.addEventListener("mouseover", changeDef2);
-
-function changeDef2(event){
-  playSample('Grand Piano', 'F#3')
-}
-
-var note3 = document.querySelector(".blob3");
-
-// Set up an event handler. Notice that we don't use "on" in front
-// of the event name when doing it this way.
-note3.addEventListener("mouseover", changeDef3);
-
-function changeDef3(event){
-  playSample('Grand Piano', 'G2')
-}
-
-var note4 = document.querySelector(".blob4");
-
-// Set up an event handler. Notice that we don't use "on" in front
-// of the event name when doing it this way.
-note4.addEventListener("mouseover", changeDef4);
-
-function changeDef4(event){
-  playSample('Grand Piano', 'E4')
-}
-
-var note5 = document.querySelector(".blob5");
-
-// Set up an event handler. Notice that we don't use "on" in front
-// of the event name when doing it this way.
-note5.addEventListener("mouseover", changeDef5);
-
-function changeDef5(event){
-  playSample('Grand Piano', 'B3')
-}
+// function changeDef(event){
+//   playSample('Grand Piano', 'D2')
+// }
 
 
-var note6 = document.querySelector(".blob6");
 
-// Set up an event handler. Notice that we don't use "on" in front
-// of the event name when doing it this way.
-note6.addEventListener("mouseover", changeDef6);
+// var note1 = document.querySelector(".blob1");
 
-function changeDef6(event){
-  playSample('Grand Piano', 'C#4')
-}
+// // Set up an event handler. Notice that we don't use "on" in front
+// // of the event name when doing it this way.
+// note1.addEventListener("mouseover", changeDef1);
+
+// function changeDef1(event){
+//   playSample('Grand Piano', 'A3')
+// }
+
+// var note2 = document.querySelector(".blob2");
+
+// // Set up an event handler. Notice that we don't use "on" in front
+// // of the event name when doing it this way.
+// note2.addEventListener("mouseover", changeDef2);
+
+// function changeDef2(event){
+//   playSample('Grand Piano', 'F#3')
+// }
+
+// var note3 = document.querySelector(".blob3");
+
+// // Set up an event handler. Notice that we don't use "on" in front
+// // of the event name when doing it this way.
+// note3.addEventListener("mouseover", changeDef3);
+
+// function changeDef3(event){
+//   playSample('Grand Piano', 'G2')
+// }
+
+// var note4 = document.querySelector(".blob4");
+
+// // Set up an event handler. Notice that we don't use "on" in front
+// // of the event name when doing it this way.
+// note4.addEventListener("mouseover", changeDef4);
+
+// function changeDef4(event){
+//   playSample('Grand Piano', 'E4')
+// }
+
+// var note5 = document.querySelector(".blob5");
+
+// // Set up an event handler. Notice that we don't use "on" in front
+// // of the event name when doing it this way.
+// note5.addEventListener("mouseover", changeDef5);
+
+// function changeDef5(event){
+//   playSample('Grand Piano', 'B3')
+// }
+
+
+// var note6 = document.querySelector(".blob6");
+
+// // Set up an event handler. Notice that we don't use "on" in front
+// // of the event name when doing it this way.
+// note6.addEventListener("mouseover", changeDef6);
+
+// function changeDef6(event){
+//   playSample('Grand Piano', 'C#4')
+// }
+
+
+
+
+
+document.addEventListener("keydown", (event) => {
+  if (event.keyCode === 87) {
+    playSample('Grand Piano', 'D2')
+  }
+  else if (event.keyCode === 69) {
+    playSample('Grand Piano', 'E2')
+  }
+  else if (event.keyCode === 82) {
+    playSample('Grand Piano', 'F#2')
+  }
+  else if (event.keyCode === 84) {
+    playSample('Grand Piano', 'G2')
+  }
+  else if (event.keyCode === 89) {
+    playSample('Grand Piano', 'A2')
+  }
+  else if (event.keyCode === 85) {
+    playSample('Grand Piano', 'B2')
+  }
+  else if (event.keyCode === 73) {
+    playSample('Grand Piano', 'C#2')
+  }
+  else if (event.keyCode === 83) {
+    playSample('Grand Piano', 'D3')
+  }
+  else if (event.keyCode === 68) {
+    playSample('Grand Piano', 'E3')
+  }
+  else if (event.keyCode === 70) {
+    playSample('Grand Piano', 'F#3')
+  }
+  else if (event.keyCode === 71) {
+    playSample('Grand Piano', 'G3')
+  }
+  else if (event.keyCode === 72) {
+    playSample('Grand Piano', 'A3')
+  }
+  else if (event.keyCode === 74) {
+    playSample('Grand Piano', 'B3')
+  }
+  else if (event.keyCode === 75) {
+    playSample('Grand Piano', 'C#3')
+  }
+});
